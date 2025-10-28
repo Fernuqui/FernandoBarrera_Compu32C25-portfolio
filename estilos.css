@@ -1,0 +1,191 @@
+/*Tipografias (Solo Veiran)*/
+@font-face {
+    font-family: 'Veiran';
+    src: url('fonts/veiran-regular-1.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Veiran';
+    src: url('fonts/veiran-italic-1.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*muestras de color*/
+:root {
+    --verde: #008965;
+    --verdeoscuro: #0a3429;
+    --crema: #f6f6de;
+    /*transparencias, me sirven para el hover*/
+    --crema-50: rgba(246, 241, 222, 0.5);
+    --crema-80: rgba(246, 241, 222, 0.8);
+}
+
+/*a todo mi sitio*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*HEADER*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--verdeoscuro);
+    padding: 1rem 4rem;
+}
+
+.logo-nombre {
+    color: var(--crema);
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Veiran', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--crema-50);
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--crema);
+}
+
+
+.boton-formulario {
+    background-color: var(--verde);
+    color: var(--crema);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Veiran', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.boton-formulario:hover {
+    color: var(--verde);
+    background-color: var(--crema);
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--verdeoscuro);
+    color: var(--crema);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
+    flex-wrap: wrap;
+}
+
+footer h1 {
+    font-size: 40px;
+    margin-bottom: 0.3rem;
+    font-family: 'Veiran', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer p {
+    font-size: 1rem;
+    color: var(--crema-50);
+    font-size: 20px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+.footer-contacto ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-contacto a {
+    text-decoration: none;
+    color: var(--crema-50);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+    font-size: 20px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.footer-contacto a:hover {
+    color: var(--crema);
+}
+
+.footer-contacto svg {
+    width: 18px;
+    height: 18px;
+}
+
+/*pantallas o secciones home*/
+
+.pantallas section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  font-family: 'Archivo', sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.pantalla-1 {
+  background-color: var(--crema);
+  color: var(--verde);
+  height: 895px;
+}
+
+.pantalla-2 {
+  background-color: var(--verde);
+  color: var(--crema);
+  height: 972px;
+}
+
+.pantalla-3 {
+  background-color: var(--crema);
+  color: var(--verde);
+  height: 799px;
+}
