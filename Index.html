@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Mi Portfolio</title>
+  <title>FB | Inicio</title>
   <link rel="stylesheet" href="estilos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,43 +16,116 @@
     <a href="#" class="logo-nombre">
       Barrera, Fernando Ezequiel
     </a>
-    <section>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#acerca-de-mi">Acerca de mí</a></li>
-          <li><a href="#">Mi trabajo</a></li>
-        </ul>
-        <a href="#" class="boton-formulario">¡Trabajemos juntos!</a>
-      </nav>
-    </section>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+        <li><a href="pages/galeria.html">Mi trabajo</a></li>
+      </ul>
+      <a href="pages/contacto.html" class="boton-formulario">¡Trabajemos juntos!</a>
+    </nav>
   </header>
 
-<main>
-  <div class="pantallas">
-  <section class="pantalla-1">
-    <h2>portada</h2>
-    <p>mi portada</p>
-  </section>
-
-  <section id="acerca-de-mi" class="pantalla-2">
-    <h2>acerca de mi</h2>
-    <p>acerca de mi bla bla etc</p>
-  </section>
-
-  <section class="pantalla-3">
-    <h2>habilidades</h2>
-    <p>estudios y habilidades bla bla etc etc</p>
-  </section>
-  </div>
-</main>
-
-  <footer>
-    <section class="footer-logo">
-      <h1>Barrera, Fernando Ezequiel</h1>
-      <p>Diseñador y comunicador visual / UNLa</p>
+  <main>
+    <!-- pantalla 1 -->
+    <section class="pantalla-1">
+      <article class="portada">
+        <div class="portada-imagen">
+          <img src="img/home/portada-home2.png" alt="foto de fernando barrera">
+        </div>
+        <div class="portada-texto">
+          <h3>¡Bienvenido!</h3>
+          <hr class="linea-verde">
+          <h1 class="titulo-portfolio">
+            PORTFOLIO<br>PORTFOLIO<br>PORTFOLIO<br>PORTFOLIO<br>PORTFOLIO
+          </h1>
+          <a href="#acerca-de-mi" class="boton-conoceme">¡Conoceme!</a>
+        </div>
+      </article>
     </section>
 
-    <section class="footer-contacto">
+    <!-- pantalla 2 -->
+    <section id="acerca-de-mi" class="pantalla-2">
+      <article class="sobremi">
+        <div class="sobremi-texto">
+          <h2>Acerca de mi</h2>
+          <hr class="linea-crema">
+          <h3><em>Hola!</em><br>Soy Fernec</h3>
+          <p>
+            Soy Diseñador y Comunicador Visual, actualmente viviendo en Argentina y estudiando
+            en la Universidad Nacional de Lanús. Me especializo en diseño editorial y tipografía,
+            dos áreas que me apasionan profundamente. Tengo una mirada creativa, en constante evolución,
+            y muchas ganas de seguir creciendo en el mundo del diseño.
+          </p>
+          <p class="sobremi-insta">¡VISITÁ MI INSTAGRAM PARA CONOCER MÁS!</p>
+          <a href="https://www.instagram.com/fernec.dg" target="_blank" class="boton-instagram">@fernec.dg</a>
+        </div>
+
+        <div class="sobremi-imagen">
+          <img src="img/home/prueba3.png" alt="foto de fernando barrera sentado">
+        </div>
+      </article>
+    </section>
+
+    <!-- pantalla 3 -->
+    <section class="pantalla-3">
+      <article class="estudios-habilidades">
+        <div class="columna-estudios">
+          <h2>Estudios</h2>
+          <hr class="linea-verde">
+          <div class="niveles">
+            <div class="">
+              <h4>Nivel Primario - Graduado / 2000-2006</h4>
+              <p>Instituto José Manuel Estrada / R. Calzada, Buenos Aires.</p>
+            </div>
+            <div class="">
+              <h4>Nivel Secundario - Graduado / 2007-2014</h4>
+              <p>Instituto José Manuel Estrada / R. Calzada, Buenos Aires.<br>
+                Bachiller en Economía y Administración.</p>
+            </div>
+            <div class="">
+              <h4>Nivel Universitario / 2020 - Actualidad</h4>
+              <p>Universidad Nacional de Lanús / Lanús, Buenos Aires.<br>
+                Diseño y Comunicación Visual. Materias aprobadas: x</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columna-habilidades">
+          <h2>Mis habilidades</h2>
+          <hr class="linea-verde">
+          <p>
+            Trabajo principalmente con Illustrator, Photoshop e InDesign para dar forma a ideas visuales
+            y proyectos de diseño. Me gusta combinar técnica y creatividad, jugar con la tipografía,
+            el color y la composición para lograr piezas con personalidad y coherencia. Siempre estoy
+            explorando nuevas formas de llevar mis ideas al siguiente nivel.
+          </p>
+
+          <div class="programas">
+            <div class="programa-ps">
+              <strong>Adobe Photoshop</strong><span>Nivel: Avanzado</span>
+            </div>
+            <div class="programa-ai">
+              <strong>Adobe Illustrator</strong><span>Nivel: Avanzado</span>
+            </div>
+            <div class="programa-id">
+              <strong>Adobe InDesign</strong><span>Nivel: Avanzado</span>
+            </div>
+            <div class="programa-ae">
+              <strong>Adobe After Effects</strong><span>Nivel: Principiante</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">
+      <a href="#header" class="footer-nombre">Barrera, Fernando Ezequiel</a>
+      <p>Diseñador y comunicador visual / UNLa</p>
+    </div>
+    
+    <div class="footer-contacto">
       <ul>
         <li>
           <a href="https://www.instagram.com/fernec.dg" target="_blank">
@@ -83,7 +156,7 @@
           </a>
         </li>
       </ul>
-    </section>
+    </div>
   </footer>
 </body>
 

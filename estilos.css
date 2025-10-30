@@ -1,191 +1,792 @@
-/*Tipografias (Solo Veiran)*/
+/* TIPOGRAFÍAS (Solo veiran, la otra linkeada desde google fonts) */
 @font-face {
-    font-family: 'Veiran';
-    src: url('fonts/veiran-regular-1.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Veiran';
+  src: url('fonts/veiran-regular-1.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Veiran';
+  src: url('fonts/veiran-italic-1.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
 }
 
-@font-face {
-    font-family: 'Veiran';
-    src: url('fonts/veiran-italic-1.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-}
-
-/*muestras de color*/
+/* PALETA DE COLORES */
 :root {
-    --verde: #008965;
-    --verdeoscuro: #0a3429;
-    --crema: #f6f6de;
-    /*transparencias, me sirven para el hover*/
-    --crema-50: rgba(246, 241, 222, 0.5);
-    --crema-80: rgba(246, 241, 222, 0.8);
+  --verde: #008965;
+  --verdeoscuro: #0a3429;
+  --crema: #f6f6de;
+  /* estos me sirven para algunas transparencias */
+  --crema-50: rgba(246, 241, 222, 0.5);
+  --crema-80: rgba(246, 241, 222, 0.8);
 }
 
-/*a todo mi sitio*/
+/* PARA TODO EL SITIO */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 html {
   scroll-behavior: smooth;
 }
 
-/*HEADER*/
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--verdeoscuro);
-    padding: 1rem 4rem;
-}
-
-.logo-nombre {
-    color: var(--crema);
-    text-decoration: none;
-    font-size: 40px;
-    font-family: 'Veiran', serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.nav-list {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    font-family: 'Archivo', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: var(--crema-50);
-    transition: color 0.3s ease;
-}
-
-.nav-list a:hover {
-    color: var(--crema);
-}
-
-
-.boton-formulario {
-    background-color: var(--verde);
-    color: var(--crema);
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-family: 'Veiran', serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.boton-formulario:hover {
-    color: var(--verde);
-    background-color: var(--crema);
-}
-
-/*FOOTER*/
-footer {
-    background-color: var(--verdeoscuro);
-    color: var(--crema);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 4rem;
-    flex-wrap: wrap;
-}
-
-footer h1 {
-    font-size: 40px;
-    margin-bottom: 0.3rem;
-    font-family: 'Veiran', serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-footer p {
-    font-size: 1rem;
-    color: var(--crema-50);
-    font-size: 20px;
-    font-family: 'Archivo', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 10px;
-}
-
-.footer-contacto ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-contacto a {
-    text-decoration: none;
-    color: var(--crema-50);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-    font-size: 20px;
-    font-family: 'Archivo', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.footer-contacto a:hover {
-    color: var(--crema);
-}
-
-.footer-contacto svg {
-    width: 18px;
-    height: 18px;
-}
-
-/*pantallas o secciones home*/
-
-.pantallas section {
-  width: 100%;
+body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding: 0;
+  background-color: var(--crema); /*en la galeria me quedaba un pixel blanco, no supe como resolver y usé esto XD*/
+} 
+
+.main-content { /*esto es más que nada para la galería*/
+  flex: 1;
+}
+
+/* HEADER */
+#header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 4rem;
+  background-color: var(--verdeoscuro);
+  padding: 1rem 4rem;
+}
+.logo-nombre {
+  color: var(--crema);
+  text-decoration: none;
+  font-size: 40px;
+  font-family: 'Veiran', serif;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  font-size: 20px;
   font-family: 'Archivo', sans-serif;
-  font-size: 24px;
-  text-align: center;
+}
+.nav-list a {
+  text-decoration: none;
+  color: var(--crema-50);
+  transition: color 0.3s ease;
+}
+.nav-list a:hover {
+  color: var(--crema);
+}
+.boton-formulario {
+  background-color: var(--verde);
+  color: var(--crema);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'Veiran', serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.boton-formulario:hover {
+  background-color: var(--crema);
+  color: var(--verde);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--verdeoscuro);
+  color: var(--crema);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4rem;
+  flex-wrap: wrap;
+}
+.footer-logo a {
+  font-size: 40px;
+  font-family: 'Veiran', serif;
+  font-weight: 100;
+  text-decoration: none;
+  color: var(--crema)
+}
+footer p {
+  font-size: 20px;
+  color: var(--crema-50);
+  font-family: 'Archivo', sans-serif;
+}
+.footer-contacto ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.footer-contacto a {
+  text-decoration: none;
+  color: var(--crema-50);
+  font-size: 20px;
+  font-family: 'Archivo', sans-serif;
+  transition: color 0.3s ease;
+}
+.footer-contacto a:hover {
+  color: var(--crema);
+}
+
+/* PANTALLAS o frames, no se como nombrarlas :P */
+.pantalla-1,
+.pantalla-2,
+.pantalla-3 {
+  min-height: 100vh; /* esto hace que se adapte a cualquier pantalla */
+}
+.pantalla-1 {
+  background-color: var(--crema);
+  color: var(--verde);
+}
+.pantalla-2 {
+  background-color: var(--verde);
+  color: var(--crema);
+}
+.pantalla-3 {
+  background-color: var(--crema);
+  color: var(--verde);
+}
+
+/* FILETES HOME */
+hr {
+  border: none;
+  height: 1px;
+  margin: 0;
+}
+.linea-verde {
+  background-color: var(--verde);
+  opacity: 100;
+  width: 552px;
+  margin: 0.5rem 0 2rem 0;
+}
+.linea-crema {
+  background-color: var(--crema);
+  opacity: 0.6;
+  width: 550px;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+/* layout home con grid */
+.portada,
+.sobremi,
+.estudios-habilidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
 .pantalla-1 {
   background-color: var(--crema);
   color: var(--verde);
-  height: 895px;
+  display: flex;
+  align-items: stretch;
 }
 
-.pantalla-2 {
-  background-color: var(--verde);
-  color: var(--crema);
-  height: 972px;
+/* imgs home */
+.portada-imagen,
+.sobremi-imagen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.portada-imagen img,
+.sobremi-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.pantalla-3 {
+/* texto portada home */
+.portada-texto {
   background-color: var(--crema);
   color: var(--verde);
-  height: 799px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem;
+  margin-left: 115px;
+}
+.portada-texto h3 {
+  font-family: 'Veiran', serif;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-size: 48px;
+  margin-left: 130px;
+}
+.titulo-portfolio {
+  font-family: 'Veiran', serif;
+  font-weight: 400;
+  font-size: 110px;
+  line-height: 1.1;
+  opacity: 0.8;
+}
+.boton-conoceme {
+  background-color: var(--verde);
+  color: var(--crema);
+  text-decoration: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 30px;
+  margin-top: 2.5rem;
+  font-family: 'Veiran', serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 180px;
+  font-size: 20px;
+}
+.boton-conoceme:hover {
+  background-color: var(--crema);
+  color: var(--verde);
+}
+
+/* texto acerca de mi home */
+.sobremi-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8rem;
+}
+.sobremi-texto h2 {
+  font-family: 'veiran', serif;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-size: 48px;
+}
+.sobremi-texto h3 {
+  font-family: 'Veiran', serif;
+  font-size: 96px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 100;
+}
+.sobremi-texto p {
+  font-family: 'Archivo', sans-serif;
+  max-width: 550px;
+  margin-bottom: 1.5rem;
+  font-size: 20px;
+}
+
+.boton-instagram {
+  background-color: var(--crema);
+  color: var(--verde);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-family: 'Veiran', serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 20px;
+  margin-left: 185px;
+  margin-top: 15px;
+}
+.boton-instagram:hover {
+  background-color: var(--verde);
+  color: var(--crema);
+  border: 1px solid var(--crema);
+}
+
+/* habilidades home */
+.estudios-habilidades {
+  padding: 20rem 6rem;
+  gap: 4rem;
+}
+.estudios-habilidades h2 {
+  font-family: 'veiran', serif;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-size: 40px;
+}
+.estudios-habilidades h4 {
+  font-family: 'Archivo', sans-serif;
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+.estudios-habilidades p {
+  font-family: 'Archivo', sans-serif;
+  margin-top: 1rem;
+  font-size: 20px;
+}
+
+.programas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem 2rem;
+  margin-top: 7rem;
+  font-size: 20px;
+}
+.programa-ps {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Archivo', sans-serif;
+}
+
+.programa-ai {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Archivo', sans-serif;
+}
+
+.programa-id {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Archivo', sans-serif;
+}
+
+.programa-ae {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Archivo', sans-serif;
+}
+
+.columna-estudios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.columna-estudios .niveles div {
+  margin-bottom: 4.5rem;
+}
+
+/* CONTACTO */
+.contacto-texto h2 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.contacto-texto h3 {
+  font-family: 'veiran', serif;
+  font-size: 96px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.contacto-texto p {
+  font-family: 'Archivo', sans-serif;
+  font-size: 25px;
+  line-height: 1.2;
+  max-width: 500px;
+  font-weight: 300;
+}
+
+.pantalla-contacto {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.contacto-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.contacto-texto {
+  background-color: var(--crema);
+  color: var(--verde);
+  padding: 6rem 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacto-formulario {
+  background-color: var(--verde);
+  color: var(--crema);
+  padding: 6rem 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.contacto-formulario form {
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: 'Archivo', sans-serif;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+  background-color: var(--crema-80);
+  color: var(--verdeoscuro);
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  font-size: 16px;
+}
+
+.contacto-formulario button {
+  background-color: var(--crema);
+  color: var(--verde);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-family: 'Veiran', serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contacto-formulario button:hover {
+  background-color: var(--verdeoscuro);
+  color: var(--crema);
+}
+
+.contacto-formulario button.enviado {
+  background-color: var(--crema);
+  color: var(--verdeoscuro);
+  border: 1px solid var(--verdeoscuro);
+  transition: all 0.2s ease;
+}
+
+textarea {
+  font-family: 'Archivo', sans-serif;
+}
+
+/* GALERÍA */
+
+.galeria {
+    background-color: var(--crema);
+    padding: 200px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenido-galeria {
+    display: flex;
+    align-items: center;
+    gap: 155px;
+}
+
+.texto-galeria {
+    margin-left: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 260px;
+}
+
+.primer-texto {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--verde);
+    margin-bottom: 18px;
+}
+
+.segundo-texto-titulo {
+    font-family: 'Veiran', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 0.9;
+    color: var(--verde);
+    margin: 0 0 6px 0;
+}
+
+.tercer-texto-parrafo {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    color: var(--verde);
+    margin: 8px;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* LAYOUT PRINCIPAL GALERIA */
+.portfolio {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 40px;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.texto {
+    width: var(--left-width);
+    flex: 0 0 var(--left-width);
+    line-height: 1;
+}
+
+.texto-sub {
+    font-size: 24px;
+    font-weight: 100;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.06em;
+}
+
+.texto-titulo {
+    font-size: 96px;
+    margin: 0 0 8px 0;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.texto-bajada {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* slider */
+.slider-galeria {
+    position: relative;
+    width: var(--slider-w);
+    height: var(--slider-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* flechitas */
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-izq {
+    left: -93px;
+    top: 163px;
+}
+
+.btn-der {
+    right: 30px;
+    top: 442px;
+}
+
+.flecha svg {
+    display: block;
+}
+
+.flecha svg path {
+    transition: fill 0.18s ease;
+    fill: var(--verde);
+}
+
+.flecha:hover svg path {
+    fill: var(--verde-hover);
+}
+
+/* slider (contenedor) */
+.slider {
+    position: relative;
+    width: var(--slider-w);
+    height: var(--slider-h)
+}
+
+.proyectos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 321px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.proyectos.active {
+    opacity: 1;
+    left: 260px;
+    z-index: 2;
+}
+
+.proyectos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s cubic-bezier(.2, .9, .2, 1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.proyectos img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.25s ease, transform 0.35s ease;
+}
+
+/* posiciones y tamaños según ubicación */
+.proyectos.active {
+    width: 321px;
+    height: 321px;
+    left: 192px;
+    z-index: 3;
+    transform: translateY(0);
+}
+
+.proyectos.next {
+    width: 196px;
+    height: 285px;
+    left: 540px;
+    z-index: 2;
+    transform: translateY(18px);
+    opacity: 0.95;
+}
+
+.proyectos.prev {
+    width: 196px;
+    height: 285px;
+    left: -30px;
+    z-index: 2;
+    transform: translateY(18px);
+    opacity: 0.95;
+}
+
+.proyectos {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+}
+
+.proyectos:hover img {
+    transform: scale(1.03);
+    opacity: 0.35;
+}
+
+/* overlay, verde pleno que cubre la imagen en hover */
+.proyectos .overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    pointer-events: none;
+    transition: background 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+}
+
+.proyectos:hover .overlay,
+.proyectos:focus-within .overlay {
+    background: var(--verde);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* texto del overlay: es el bloque similar al bloque lateral pero más chico */
+.overlay-texto {
+    color: var(--crema);
+    max-width: 220px;
+    text-align: left;
+}
+
+
+.ov-proyecto {
+    font-family: 'Archivo', sans-serif;
+    font-size: 15px;
+    color: var(--beige);
+    font-weight:100;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.06em;
+}
+
+.ov-titulo {
+    font-family: 'Veiran', serif;
+    font-style: italic;
+    line-height: 0.9;
+    color: var(--beige);
+    margin: 0 0 6px 0;
+    font-size: 37px;
+    line-height: 1;
+}
+
+.ov-desc {
+    font-family: 'Archivo', sans-serif;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 100;
+    line-height: 1.2;
+    max-width: 220px;
+}
+
+/*EMPTY STATE, acá debería ir cada proyecto :P*/
+.empty-state {
+  display: flex;
+  height: 100vh;
+  font-family: 'Archivo', sans-serif;
+}
+
+.empty-state-izq,
+.empty-state-der {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-state-izq {
+  background-color: var(--crema);
+  text-align: center;
+  padding: 2rem;
+  color: var(--verde);
+}
+
+.empty-state-der {
+  background-color: var(--verde)
+}
+
+.empty-state-icono svg {
+  width: 550px;
+  height: 550px;
+  color: var(--crema)
+}
+
+.empty-state-texto h1 {
+  font-family: 'Veiran', serif;
+  font-size: 96px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-transform: lowercase;
+
+}
+
+.empty-state-texto p {
+  font-size: 25px;
+font-family: 'Archivo', sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+.boton-volver {
+  background-color: var(--verde);
+  color: var(--crema);
+  font-family: 'Archivo', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  margin-top: 35px;
+}
+
+.boton-volver:hover {
+  background-color: var(--verdeoscuro)
 }
