@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>FB | Inicio</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="estilos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,15 +30,16 @@
     <!-- pantalla 1 -->
     <section class="pantalla-1">
       <article class="portada">
-        <div class="portada-imagen">
-          <img src="img/home/portada-home2.png" alt="foto de fernando barrera">
-        </div>
+        <img src="img/home/home-pantalla1.png" alt="foto de fernando barrera" class="portada-imagen">
         <div class="portada-texto">
           <h3>¡Bienvenido!</h3>
-          <hr class="linea-verde">
-          <h1 class="titulo-portfolio">
-            PORTFOLIO<br>PORTFOLIO<br>PORTFOLIO<br>PORTFOLIO<br>PORTFOLIO
-          </h1>
+          <div class="titulo-portfolio">
+            <span>PORTFOLIO</span>
+            <span>PORTFOLIO</span>
+            <span>PORTFOLIO</span>
+            <span>PORTFOLIO</span>
+            <span>PORTFOLIO</span>
+          </div>
           <a href="#acerca-de-mi" class="boton-conoceme">¡Conoceme!</a>
         </div>
       </article>
@@ -48,8 +50,8 @@
       <article class="sobremi">
         <div class="sobremi-texto">
           <h2>Acerca de mi</h2>
-          <hr class="linea-crema">
-          <h3><em>Hola!</em><br>Soy Fernec</h3>
+          <h3 class="saludo">Hola!</h3>
+          <h3 class="sobremi-titulo">Soy Fernec</h3>
           <p>
             Soy Diseñador y Comunicador Visual, actualmente viviendo en Argentina y estudiando
             en la Universidad Nacional de Lanús. Me especializo en diseño editorial y tipografía,
@@ -59,10 +61,7 @@
           <p class="sobremi-insta">¡VISITÁ MI INSTAGRAM PARA CONOCER MÁS!</p>
           <a href="https://www.instagram.com/fernec.dg" target="_blank" class="boton-instagram">@fernec.dg</a>
         </div>
-
-        <div class="sobremi-imagen">
-          <img src="img/home/prueba3.png" alt="foto de fernando barrera sentado">
-        </div>
+        <img src="img/home/home-pantalla2.png" alt="foto de fernando barrera sentado" class="sobremi-imagen">
       </article>
     </section>
 
@@ -71,7 +70,6 @@
       <article class="estudios-habilidades">
         <div class="columna-estudios">
           <h2>Estudios</h2>
-          <hr class="linea-verde">
           <div class="niveles">
             <div class="">
               <h4>Nivel Primario - Graduado / 2000-2006</h4>
@@ -92,7 +90,6 @@
 
         <div class="columna-habilidades">
           <h2>Mis habilidades</h2>
-          <hr class="linea-verde">
           <p>
             Trabajo principalmente con Illustrator, Photoshop e InDesign para dar forma a ideas visuales
             y proyectos de diseño. Me gusta combinar técnica y creatividad, jugar con la tipografía,
@@ -124,7 +121,7 @@
       <a href="#header" class="footer-nombre">Barrera, Fernando Ezequiel</a>
       <p>Diseñador y comunicador visual / UNLa</p>
     </div>
-    
+
     <div class="footer-contacto">
       <ul>
         <li>

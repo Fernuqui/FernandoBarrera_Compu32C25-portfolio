@@ -5,6 +5,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Veiran';
   src: url('fonts/veiran-italic-1.otf') format('opentype');
@@ -28,6 +29,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -37,10 +39,12 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0;
-  background-color: var(--crema); /*en la galeria me quedaba un pixel blanco, no supe como resolver y usé esto XD*/
-} 
+  background-color: var(--crema);
+  /*en la galeria me quedaba un pixel blanco, no supe como resolver y usé esto XD*/
+}
 
-.main-content { /*esto es más que nada para la galería*/
+.main-content {
+  /*esto es más que nada para la galería*/
   flex: 1;
 }
 
@@ -50,43 +54,50 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--verdeoscuro);
-  padding: 1rem 4rem;
+  padding: 16px 64px;
 }
+
 .logo-nombre {
   color: var(--crema);
   text-decoration: none;
   font-size: 40px;
   font-family: 'Veiran', serif;
 }
+
 nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 32px;
 }
+
 .nav-list {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 32px;
   font-size: 20px;
   font-family: 'Archivo', sans-serif;
 }
+
 .nav-list a {
   text-decoration: none;
   color: var(--crema-50);
   transition: color 0.3s ease;
 }
+
 .nav-list a:hover {
   color: var(--crema);
 }
+
 .boton-formulario {
   background-color: var(--verde);
   color: var(--crema);
-  padding: 0.6rem 1.2rem;
+  padding: 10px 19px;
   border-radius: 20px;
   text-decoration: none;
   font-family: 'Veiran', serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .boton-formulario:hover {
   background-color: var(--crema);
   color: var(--verde);
@@ -99,26 +110,30 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 4rem;
-  flex-wrap: wrap;
+  padding: 48px 64px;
 }
+
 .footer-logo a {
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Veiran', serif;
   font-weight: 100;
   text-decoration: none;
   color: var(--crema)
 }
+
 footer p {
   font-size: 20px;
   color: var(--crema-50);
   font-family: 'Archivo', sans-serif;
 }
+
 .footer-contacto ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 32px;
+  align-items: center;
 }
+
 .footer-contacto a {
   text-decoration: none;
   color: var(--crema-50);
@@ -126,6 +141,7 @@ footer p {
   font-family: 'Archivo', sans-serif;
   transition: color 0.3s ease;
 }
+
 .footer-contacto a:hover {
   color: var(--crema);
 }
@@ -134,38 +150,23 @@ footer p {
 .pantalla-1,
 .pantalla-2,
 .pantalla-3 {
-  min-height: 100vh; /* esto hace que se adapte a cualquier pantalla */
+  min-height: 100vh;
+  /* esto hace que se adapte a cualquier pantalla */
 }
+
 .pantalla-1 {
   background-color: var(--crema);
   color: var(--verde);
 }
+
 .pantalla-2 {
   background-color: var(--verde);
   color: var(--crema);
 }
+
 .pantalla-3 {
   background-color: var(--crema);
   color: var(--verde);
-}
-
-/* FILETES HOME */
-hr {
-  border: none;
-  height: 1px;
-  margin: 0;
-}
-.linea-verde {
-  background-color: var(--verde);
-  opacity: 100;
-  width: 552px;
-  margin: 0.5rem 0 2rem 0;
-}
-.linea-crema {
-  background-color: var(--crema);
-  opacity: 0.6;
-  width: 550px;
-  margin: 0.5rem 0 1.5rem 0;
 }
 
 /* layout home con grid */
@@ -190,14 +191,10 @@ hr {
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-.portada-imagen img,
-.sobremi-imagen img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   display: block;
 }
+
 
 /* texto portada home */
 .portada-texto {
@@ -207,16 +204,18 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 4rem;
+  padding: 64px;
   margin-left: 115px;
 }
+
 .portada-texto h3 {
   font-family: 'Veiran', serif;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   font-size: 48px;
   margin-left: 130px;
 }
+
 .titulo-portfolio {
   font-family: 'Veiran', serif;
   font-weight: 400;
@@ -224,21 +223,36 @@ hr {
   line-height: 1.1;
   opacity: 0.8;
 }
+
 .boton-conoceme {
   background-color: var(--verde);
   color: var(--crema);
   text-decoration: none;
-  padding: 0.8rem 2.5rem;
+  padding: 13px 40px;
   border-radius: 30px;
-  margin-top: 2.5rem;
+  margin-top: 40px;
   font-family: 'Veiran', serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-left: 180px;
   font-size: 20px;
 }
+
 .boton-conoceme:hover {
   background-color: var(--crema);
   color: var(--verde);
+}
+
+.titulo-portfolio {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Veiran', serif;
+  font-size: 110px;
+  line-height: 1.1;
+  opacity: 0.8;
+}
+
+.titulo-portfolio span {
+  display: block;
 }
 
 /* texto acerca de mi home */
@@ -247,25 +261,28 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 8rem;
+  padding: 128px;
 }
+
 .sobremi-texto h2 {
   font-family: 'veiran', serif;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   font-size: 48px;
 }
+
 .sobremi-texto h3 {
   font-family: 'Veiran', serif;
   font-size: 96px;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   font-weight: 100;
 }
+
 .sobremi-texto p {
   font-family: 'Archivo', sans-serif;
   max-width: 550px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   font-size: 20px;
 }
 
@@ -273,50 +290,71 @@ hr {
   background-color: var(--crema);
   color: var(--verde);
   text-decoration: none;
-  padding: 0.8rem 1.5rem;
+  padding: 13px 24px;
   border-radius: 30px;
   font-family: 'Veiran', serif;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-size: 20px;
-  margin-left: 185px;
+  font-size: 25px;
+  align-self: flex-start;
   margin-top: 15px;
 }
+
 .boton-instagram:hover {
   background-color: var(--verde);
   color: var(--crema);
   border: 1px solid var(--crema);
 }
 
+.saludo {
+  font-family: 'veiran', serif;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  color: var(--crema);
+}
+
+.sobremi-titulo {
+  font-family: 'Veiran', serif;
+  font-size: 96px;
+  font-weight: 100;
+  line-height: 1.2;
+  color: var(--crema);
+  margin-bottom: 16px;
+}
+
 /* habilidades home */
 .estudios-habilidades {
-  padding: 20rem 6rem;
-  gap: 4rem;
+  padding: 320px 96px;
+  gap: 64px;
 }
+
 .estudios-habilidades h2 {
   font-family: 'veiran', serif;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   font-size: 40px;
 }
+
 .estudios-habilidades h4 {
   font-family: 'Archivo', sans-serif;
-  margin-top: 1rem;
+  margin-top: 16px;
   font-size: 18px;
 }
 
 .estudios-habilidades p {
   font-family: 'Archivo', sans-serif;
-  margin-top: 1rem;
+  margin-top: 16px;
   font-size: 20px;
 }
 
 .programas {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3.5rem 2rem;
-  margin-top: 7rem;
+  gap: 3.5rem 32px;
+  margin-top: 112px;
   font-size: 20px;
 }
+
 .programa-ps {
   display: flex;
   flex-direction: column;
@@ -345,11 +383,11 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 2rem;
+  padding-right: 32px;
 }
 
 .columna-estudios .niveles div {
-  margin-bottom: 4.5rem;
+  margin-bottom: 72px;
 }
 
 /* CONTACTO */
@@ -363,7 +401,7 @@ hr {
   font-family: 'veiran', serif;
   font-size: 96px;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   font-style: italic;
 }
 
@@ -390,7 +428,7 @@ hr {
 .contacto-texto {
   background-color: var(--crema);
   color: var(--verde);
-  padding: 6rem 15rem;
+  padding: 96px 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -399,7 +437,7 @@ hr {
 .contacto-formulario {
   background-color: var(--verde);
   color: var(--crema);
-  padding: 6rem 6rem;
+  padding: 96px 96px;
   display: flex;
   align-items: center;
 }
@@ -409,7 +447,7 @@ hr {
   max-width: 550px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
   font-family: 'Archivo', sans-serif;
 }
 
@@ -419,7 +457,7 @@ hr {
   color: var(--verdeoscuro);
   border: none;
   border-radius: 10px;
-  padding: 0.8rem 1rem;
+  padding: 13px 16px;
   font-size: 16px;
 }
 
@@ -427,7 +465,7 @@ hr {
   background-color: var(--crema);
   color: var(--verde);
   border: none;
-  padding: 0.8rem 2rem;
+  padding: 13px 32px;
   border-radius: 30px;
   font-family: 'Veiran', serif;
   font-size: 18px;
@@ -454,276 +492,275 @@ textarea {
 /* GALERÍA */
 
 .galeria {
-    background-color: var(--crema);
-    padding: 200px 0;
-    display: flex;
-    justify-content: space-evenly;
+  background-color: var(--crema);
+  padding: 200px 0;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .contenido-galeria {
-    display: flex;
-    align-items: center;
-    gap: 155px;
+  display: flex;
+  align-items: center;
+  gap: 155px;
 }
 
 .texto-galeria {
-    margin-left: 230px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    min-width: 260px;
+  margin-left: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 260px;
 }
 
 .primer-texto {
-    font-family: 'Archivo', sans-serif;
-    font-weight: 300;
-    font-size: 24px;
-    color: var(--verde);
-    margin-bottom: 18px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--verde);
+  margin-bottom: 18px;
 }
 
 .segundo-texto-titulo {
-    font-family: 'Veiran', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 96px;
-    line-height: 0.9;
-    color: var(--verde);
-    margin: 0 0 6px 0;
+  font-family: 'Veiran', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 0.9;
+  color: var(--verde);
+  margin: 0 0 6px 0;
 }
 
 .tercer-texto-parrafo {
-    font-family: 'Archivo', sans-serif;
-    font-weight: 200;
-    font-size: 25px;
-    color: var(--verde);
-    margin: 8px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+  color: var(--verde);
+  margin: 8px;
 }
 
 .main-content {
-    flex: 1;
+  flex: 1;
 }
 
 /* LAYOUT PRINCIPAL GALERIA */
 .portfolio {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    padding: 40px;
-    justify-content: center;
-    min-height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 40px;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .texto {
-    width: var(--left-width);
-    flex: 0 0 var(--left-width);
-    line-height: 1;
+  width: var(--left-width);
+  flex: 0 0 var(--left-width);
+  line-height: 1;
 }
 
 .texto-sub {
-    font-size: 24px;
-    font-weight: 100;
-    margin: 0 0 8px 0;
-    letter-spacing: 0.06em;
+  font-size: 24px;
+  font-weight: 100;
+  margin: 0 0 8px 0;
 }
 
 .texto-titulo {
-    font-size: 96px;
-    margin: 0 0 8px 0;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 0.9;
+  font-size: 96px;
+  margin: 0 0 8px 0;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 0.9;
 }
 
 .texto-bajada {
-    font-size: 32px;
-    font-weight: 300;
-    margin: 0;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
 }
 
 /* slider */
 .slider-galeria {
-    position: relative;
-    width: var(--slider-w);
-    height: var(--slider-h);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: var(--slider-w);
+  height: var(--slider-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* flechitas */
 .flecha {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    border: none;
-    background: transparent;
-    padding: 6px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-izq {
-    left: -93px;
-    top: 163px;
+  left: -93px;
+  top: 163px;
 }
 
 .btn-der {
-    right: 30px;
-    top: 442px;
+  right: 30px;
+  top: 442px;
 }
 
 .flecha svg {
-    display: block;
+  display: block;
 }
 
 .flecha svg path {
-    transition: fill 0.18s ease;
-    fill: var(--verde);
+  transition: fill 0.18s ease;
+  fill: var(--verde);
 }
 
 .flecha:hover svg path {
-    fill: var(--verde-hover);
+  fill: var(--verde-hover);
 }
 
 /* slider (contenedor) */
 .slider {
-    position: relative;
-    width: var(--slider-w);
-    height: var(--slider-h)
+  position: relative;
+  width: var(--slider-w);
+  height: var(--slider-h)
 }
 
 .proyectos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 321px;
-    opacity: 0;
-    transition: all 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 321px;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
 .proyectos.active {
-    opacity: 1;
-    left: 260px;
-    z-index: 2;
+  opacity: 1;
+  left: 260px;
+  z-index: 2;
 }
 
 .proyectos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.5s cubic-bezier(.2, .9, .2, 1);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s cubic-bezier(.2, .9, .2, 1);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 }
 
 .proyectos img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.25s ease, transform 0.35s ease;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.25s ease, transform 0.35s ease;
 }
 
 /* posiciones y tamaños según ubicación */
 .proyectos.active {
-    width: 321px;
-    height: 321px;
-    left: 192px;
-    z-index: 3;
-    transform: translateY(0);
+  width: 321px;
+  height: 321px;
+  left: 192px;
+  z-index: 3;
+  transform: translateY(0);
 }
 
 .proyectos.next {
-    width: 196px;
-    height: 285px;
-    left: 540px;
-    z-index: 2;
-    transform: translateY(18px);
-    opacity: 0.95;
+  width: 196px;
+  height: 285px;
+  left: 540px;
+  z-index: 2;
+  transform: translateY(18px);
+  opacity: 0.95;
 }
 
 .proyectos.prev {
-    width: 196px;
-    height: 285px;
-    left: -30px;
-    z-index: 2;
-    transform: translateY(18px);
-    opacity: 0.95;
+  width: 196px;
+  height: 285px;
+  left: -30px;
+  z-index: 2;
+  transform: translateY(18px);
+  opacity: 0.95;
 }
 
 .proyectos {
-    opacity: 0;
-    transform: translateY(30px) scale(0.98);
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
 }
 
 .proyectos:hover img {
-    transform: scale(1.03);
-    opacity: 0.35;
+  transform: scale(1.03);
+  opacity: 0.35;
 }
 
 /* overlay, verde pleno que cubre la imagen en hover */
 .proyectos .overlay {
-    position: absolute;
-    inset: 0;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    padding: 18px;
-    pointer-events: none;
-    transition: background 0.25s ease, opacity 0.25s ease;
-    opacity: 0;
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  pointer-events: none;
+  transition: background 0.25s ease, opacity 0.25s ease;
+  opacity: 0;
 }
 
 .proyectos:hover .overlay,
 .proyectos:focus-within .overlay {
-    background: var(--verde);
-    opacity: 1;
-    pointer-events: auto;
+  background: var(--verde);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* texto del overlay: es el bloque similar al bloque lateral pero más chico */
 .overlay-texto {
-    color: var(--crema);
-    max-width: 220px;
-    text-align: left;
+  color: var(--crema);
+  max-width: 220px;
+  text-align: left;
 }
 
 
 .ov-proyecto {
-    font-family: 'Archivo', sans-serif;
-    font-size: 15px;
-    color: var(--beige);
-    font-weight:100;
-    margin: 0 0 6px 0;
-    letter-spacing: 0.06em;
+  font-family: 'Archivo', sans-serif;
+  font-size: 15px;
+  color: var(--beige);
+  font-weight: 100;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.06em;
 }
 
 .ov-titulo {
-    font-family: 'Veiran', serif;
-    font-style: italic;
-    line-height: 0.9;
-    color: var(--beige);
-    margin: 0 0 6px 0;
-    font-size: 37px;
-    line-height: 1;
+  font-family: 'Veiran', serif;
+  font-style: italic;
+  line-height: 0.9;
+  color: var(--beige);
+  margin: 0 0 6px 0;
+  font-size: 37px;
+  line-height: 1;
 }
 
 .ov-desc {
-    font-family: 'Archivo', sans-serif;
-    font-size: 13px;
-    margin: 0;
-    font-weight: 100;
-    line-height: 1.2;
-    max-width: 220px;
+  font-family: 'Archivo', sans-serif;
+  font-size: 13px;
+  margin: 0;
+  font-weight: 100;
+  line-height: 1.2;
+  max-width: 220px;
 }
 
 /*EMPTY STATE, acá debería ir cada proyecto :P*/
@@ -744,7 +781,7 @@ textarea {
 .empty-state-izq {
   background-color: var(--crema);
   text-align: center;
-  padding: 2rem;
+  padding: 32px;
   color: var(--verde);
 }
 
@@ -762,14 +799,14 @@ textarea {
   font-family: 'Veiran', serif;
   font-size: 96px;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   text-transform: lowercase;
 
 }
 
 .empty-state-texto p {
   font-size: 25px;
-font-family: 'Archivo', sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: 200;
   line-height: 1.6;
 }
@@ -780,7 +817,7 @@ font-family: 'Archivo', sans-serif;
   font-family: 'Archivo', sans-serif;
   font-size: 20px;
   font-weight: 400;
-  padding: 0.75rem 2rem;
+  padding: 12px 32px;
   border: none;
   border-radius: 30px;
   transition: background-color 0.3s ease;
@@ -789,4 +826,101 @@ font-family: 'Archivo', sans-serif;
 
 .boton-volver:hover {
   background-color: var(--verdeoscuro)
+}
+
+/*arroba media :P*/
+@media (max-width: 500px) {
+  /* HEADER */
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 24px;
+  }
+
+  .logo-nombre {
+    font-size: 32px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 18px;
+  }
+
+  .boton-formulario {
+    align-self: stretch;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 18px;
+  }
+
+  /* PORTADA */
+  .portada {
+    grid-template-columns: 1fr;
+  }
+
+  .portada-texto {
+    padding: 32px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .titulo-portfolio {
+    font-size: 64px;
+  }
+
+  .boton-conoceme {
+    align-self: center;
+    font-size: 18px;
+    padding: 10px 24px;
+  }
+
+  /* SOBRE MÍ */
+  .sobremi-texto {
+    padding: 32px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobremi-titulo {
+    font-size: 64px;
+  }
+
+  .saludo {
+    font-size: 20px;
+  }
+
+  .sobremi-texto p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .footer-logo a {
+    font-size: 32px;
+  }
+
+  .footer-contacto ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-contacto a {
+    font-size: 18px;
+  }
 }
