@@ -1,14 +1,14 @@
 /* TIPOGRAFÍAS (Solo veiran, la otra linkeada desde google fonts) */
 @font-face {
   font-family: 'Veiran';
-  src: url('fonts/veiran-regular-1.otf') format('opentype');
+  src: url('fuentes/veiran-regular-1.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Veiran';
-  src: url('fonts/veiran-italic-1.otf') format('opentype');
+  src: url('fuentes/veiran-italic-1.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
 }
